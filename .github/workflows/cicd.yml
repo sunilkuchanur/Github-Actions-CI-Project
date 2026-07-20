@@ -177,6 +177,15 @@ jobs:
       - name: Build Project for Analysis
         run: mvn -B clean verify
 
+      - name: Verify Compiled Java Classes
+        run: |   
+          echo "=== Target directory ==="
+          ls -la target/ || true
+
+          echo "=== Compiled classes ==="
+          find target/classes -type f -name "*.class" | head -30 || true
+
+
       - name: Run SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v5.0.0
         env:
