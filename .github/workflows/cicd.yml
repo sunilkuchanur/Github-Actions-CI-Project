@@ -1022,7 +1022,7 @@ jobs:
           username: ${{ secrets.SMTP_USERNAME }}
           password: ${{ secrets.SMTP_PASSWORD }}
           from: ${{ secrets.SMTP_USERNAME }}
-          to: vijayakumarbl276@gmail.com
+          to: sunilkuchanur1322@gmail.com
           subject: "❌ FAILED: DevSecOps Pipeline - ${{ github.repository }} [${{ github.ref_name }}] - ${{ steps.pipeline_status.outputs.failed_stage }}"
           body: file://reports/pipeline-summary.txt
           attachments: |
